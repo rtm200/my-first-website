@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+	
+	<title>Rouzbeh</title>
+</head>
+<body>
+<header id="header">
+	<a href="#" class="logo" onclick="rouzbeh()">Rouzbeh</a>
+		<div class="center">
+	<i class="fa fa-play" onclick="playsong()" title="play"></i>
+	<i class="fa fa-pause" onclick="pausesong()" title="pause"></i>
+	<i class="fa fa-retweet" onclick="reload()" title="replay"></i>
+	</div>
+    <ul>
+    	<li><a href="#home" class="active">Home</a></li>
+    	<li><a href="#about">About</a></li>
+    	<li><a href="#portfolio">Project</a></li>
+    	<li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="toggle" onclick="toggle()"></div>
+</header>
+<section id="home">
+	<div class="iim">
+		<div class="line1"></div>
+		 <h2>Thanks for using<br>
+        My<span id="coin" onclick="coin()">Site</span></h2>
+		 <div class="login"><a href="#">Login</a><br></div>
+		 <div class="line">
+		 <a class="register" href="#">create account</a>
+		 <div class="line2"></div>
+         </div>
+	</div>
+</section>
+
+<section id="about">
+	<div class="color1">
+		<img src="1.jpg">
+	</div>
+	<div class="about-right">
+		<h2>Hello<span>!</span></h2>
+		<h3>Here is who i am and what i do</h3>
+		<div class="click">
+		<div class="cl"><a href="#contact" class="con" id="con">Contact me</a></div>
+		<div class="cl"><a href="#" class="dow">Download CV</a></div>
+		</div>
+		<h6>------------------------------------------------------------------------------------------</h6>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+</section>
+
+<section id="portfolio">
+	<div class="color2">
+		<h2>Not Ready Yet!</h2>
+	</div>
+</section>
+
+<section id="contact">
+	<div class="color3">
+		<h2><a href="mailto:#0">Send Me Email</a></h2>
+		<div class="social">
+		<a href="#"><i class="fab fa-instagram"></i></a>
+		<a href="#"><i class="fab fa-telegram"></i></a>
+		<a href="#"><i class="fab fa-github"></i><a>
+		</div>
+	</div>
+</section>
+
+<script type="text/javascript">
+	function toggle(){
+		var header = document.getElementById("header")
+		header.classList.toggle('active')
+	}
+	function coin(){
+		document.getElementById("coin").innerHTML = "I have changed!";
+	}
+	function rouzbeh(){
+		alert('Hey!!')
+	}
+
+
+
+	var mysong = new Audio();
+	mysong.src = 'music/song.mp3';
+
+	const playsong = () =>{
+     mysong.play();
+
+     document.getElementById("i2").innerHTML = "Double click to pause the song!";
+	}
+	const pausesong = () =>{
+     mysong.pause();
+
+	}
+	const reload = () =>{
+		    mysong.play();
+		mysong.currentTime = 0;
+	}
+
+</script>
+
+
+</body>
+</html>
+
+
+
